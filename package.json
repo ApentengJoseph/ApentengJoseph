@@ -3,10 +3,11 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node server.js",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "heroku-postbuild": "ng build — prod"
   },
   "private": true,
   "dependencies": {
@@ -20,14 +21,15 @@
     "@angular/router": "~12.2.0",
     "animate.css": "^4.1.1",
     "express": "^4.17.1",
+    "path": "^0.12.7",
     "rxjs": "~6.6.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~12.2.6",
-    "@angular/cli": "~12.2.6",
-    "@angular/compiler-cli": "~12.2.0",
+    "@angular/cli": "x.x.x",
+    "@angular/compiler-cli": "x.x.x",
     "@types/jasmine": "~3.8.0",
     "@types/node": "^12.11.1",
     "jasmine-core": "~3.8.0",
@@ -36,6 +38,9 @@
     "karma-coverage": "~2.0.3",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
-    "typescript": "~4.3.5"
-  }
+    "typescript": "x.x.x"
+  },
+
+  "engines": { "node": "x.x.x", "npm": "x.x.x" }
+  
 }
